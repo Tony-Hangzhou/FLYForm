@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+    <!-- 
+     支持include，按模块划分XML配置文件。
+     <include file="FLYForm.ModuleName.xml"/>
+     -->
+    
+    <!-- 表单ID唯一 -->
+    <Form id="修改订单">
+        <Section>
+            <Cell key="price" title="价格" cellClass="FLYFormInputCell"  placeholder="auto" validateClass="FLYValidateMust,FLYValidateDecimals" />
+            <Cell key="number" title="数量" cellClass="XJNumCell" validateClass="" placeholder=""/>
+            <Cell key="unit" title="单位" cellClass="FLYFormGeneralCell" />
+            <Cell key="totalAmount" title="总计" cellClass="FLYFormGeneralCell"/>
+        </Section>
+        <Section  headerClass="DefaultSection" >
+            <Cell key="name" title="姓名" cellClass="FLYFormInputCell" validateClass="FLYValidateMust" placeholder="请填写姓名"/>
+            <Cell key="phone" title="手机号" cellClass="FLYFormInputCell" validateClass="FLYValidateMust,FLYValidateMobile" placeholder="auto"/>
+            <!-- 单项选择属性optionsData表示选项的数据源，在plist文件统一配置：FLYForm.OptionSingleData.plist -->
+            <Cell key="specifyDeliveryTimeText" title="送货时间" cellClass="FLYFormPickerCell" optionsData="送货时间" validateClass="FLYValidateMust" placeholder="auto"/>
+        </Section>
+    </Form>
+</Root>
