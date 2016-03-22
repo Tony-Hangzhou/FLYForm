@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FLYFormTableController.h"
+#import "SaveSectionView.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : FLYFormTableController<SaveSectionViewDelegate>
 
 @end
 
