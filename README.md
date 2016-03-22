@@ -6,7 +6,7 @@ FLYForm是一个用XML文件统一管理APP表单的框架，运行在iOS平台�
 ####2. 表单验证管理
 数据合法性验证是表单开发中不可缺少的环节，FLYForm统一表单验证方式，内置10种验证类，通过写XML文件即可灵活的为Cell配置一种或多种验证类。开发者在提交表单时调用`[self.flyFormModel doValidate]`即可完成表单验证。
 ####3. ViewModel <-> View 双向映射
-一直以来视图模型是表单开发中重要环节，其核心包括：a、数据更新，表单界面自动更新 b、表单界面更新，数据自动更新。FLYForm引入轻量级的K-V映射做为ViewModel，并完成ViewModel和View自动双向映射。
+一直以来视图模型是表单开发中重要环节，其核心包括：a、数据更新，表单界面自动更新 b、表单界面更新，数据自动更新。FLYForm引入轻量级的K-V映射做为ViewModel，并完成ViewModel和View自动双向映射。若服务端支持JSON格式提交，可直接把K-V映射（实质上是NSDictionary）提交到服务端。
 ####4. 模块化支持
 FLYForm支持模块化，把表单配置划分到XML文件，然后在FLYForm.xml文件中通过`<include file="FLYForm.ModuleName.xml"/>`包含进来。
 
